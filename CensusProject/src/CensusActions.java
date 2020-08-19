@@ -10,11 +10,32 @@ import java.util.Scanner;
  */
 public class CensusActions implements CensusInterface{
 	
-	public CensusActions(String filename) throws FileNotFoundException, InvalidFileFormatException {
-		
-		Scanner fileScan = new Scanner(new File(filename))
-;	}
+	private int [] dataSheet;
 	
+	private int value;
+	
+	private String input;
+	
+	public CensusActions(String filename) throws FileNotFoundException, InvalidFileFormatException {
+
+		Scanner fileScan = new Scanner(new File(filename));	
+
+		Scanner lineScan = new Scanner(fileScan.nextLine());
+
+		while(lineScan.hasNext()) {
+
+			if(lineScan.hasNextInt()) {
+
+				value = lineScan.nextInt();
+			}
+			else {
+				
+				input = lineScan.next();
+			}
+
+		}
+	}
+
 	@Override
 	public boolean isCensus() {
 		// TODO Auto-generated method stub
@@ -33,10 +54,10 @@ public class CensusActions implements CensusInterface{
 		return 0;
 	}
 
-	
+
 	@Override
 	public String toString() {
 		return null;
-		
+
 	}
 }
