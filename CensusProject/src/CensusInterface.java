@@ -1,5 +1,5 @@
 /**
- * 
+ * The CensusInterface that holds the methods behind how to interact with the Census.csv file
  * @author Sunny Moran
  *
  */
@@ -11,10 +11,15 @@ public interface CensusInterface {
 	public boolean isCensus();
 		
 	/**
-	 * Returns the total population of a specified city
-	 * @return int value for population
+	 * Returns the string name for the specified fact
+	 * @return String name
 	 */
-	public int getFact();
+	public String getFact();
 	
+	/**
+	 * Returns the int value for the specified fact
+	 * @return int value 
+	 */
+	public int getValue();
 	
 }
