@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  * Contains the methods that the user can utilize in the Census.java class
  * Implements the CensusInterface
- * @author Sunny Moran
+ * @author Sunny Moran - PersonalProject
  *
  */
 public class CensusActions implements CensusInterface{
